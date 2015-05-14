@@ -1,0 +1,1 @@
+define("App",["require","exports","module"],function(){"use strict";var i=function(){this.init()},n=i.prototype;n.init=function(){};return i});require(["./App"],function(i){"use strict";window.app=new i});define("main",function(){});
