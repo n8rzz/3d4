@@ -36,14 +36,9 @@ require.config({
     paths: {
         requirejs: '../vendor/requirejs/require',
         jquery: '../vendor/jquery/jquery',
-        modernizr: '../vendor/modernizr/modernizr',
-        'nerdery-function-bind': '../vendor/nerdery-function-bind/index',
-        'nerdery-request-animation-frame': '../vendor/nerdery-request-animation-frame/index'
+        'jquery-ujs': '../vendor/jquery-ujs/src/rails'
     },
-    shim: {
-        modernizr: {
-            exports: 'Modernizr'
-        }
-    },
+    shim: {},
+
     waitSeconds: 120
 });

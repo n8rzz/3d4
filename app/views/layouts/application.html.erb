@@ -9,7 +9,7 @@
     <title>Three D Four</title>
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" media="screen, projection" href="assets/styles/modern.css" />
+    <link rel="stylesheet" media="screen, projection" href="/assets/styles/modern.css" />
 
     <!-- POLYFILLS -->
     <!-- build:js assets/scripts/head.js -->
@@ -40,8 +40,8 @@
 </div>
 
     <!-- JAVASCRIPT -->
-    <script src="assets/vendor/requirejs/require.js"></script>
-    <script src="assets/scripts/config.js"></script>
+    <script src="/assets/vendor/requirejs/require.js"></script>
+    <script src="/assets/scripts/config.js"></script>
     <script>
         /**
          * Global constants
@@ -99,7 +99,7 @@
          * @type String
          * @final
          */
-        SETTINGS.SCRIPT_PATH = 'assets/scripts/';
+        SETTINGS.SCRIPT_PATH = '/assets/scripts/';
 
         /**
          * Set any RequireJs configuration that is dependent on dynamic
@@ -111,7 +111,7 @@
             baseUrl: SETTINGS.SCRIPT_PATH,
 
             // Params to append to the end of each js file request
-            urlArgs: 'v=' + SETTINGS.APP_VERSION + SETTINGS.CACHE_BUSTER
+            urlArgs: '' //v=' + SETTINGS.APP_VERSION + SETTINGS.CACHE_BUSTER
         });
 
         /**
