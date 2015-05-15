@@ -14,6 +14,7 @@ gem 'omniauth', '~> 1.2.2'
 
 group :development, :test do
   gem 'rspec-rails', '3.2.1'
+  gem 'capybara', '~> 2.4.4'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
