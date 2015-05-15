@@ -7,14 +7,20 @@ require(
     // RequireJS syntax is used here to specify dependencies. Do not use this
     // syntax in any other modules.
     [
-        './App'
+        'jquery',
+        './ThreeDFourApp'
     ],
     function(
+        $,
         App
     ) {
         'use strict';
 
         // Initialize
-        window.app = new App();
+        $(document).ready(function () {
+            window.app = new App();
+            window.app.appendTo('body');
+        });
+
     }
 );
