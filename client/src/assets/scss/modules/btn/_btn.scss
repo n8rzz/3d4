@@ -32,37 +32,30 @@ category: Base
 .btn {
     display: inline-block;
     margin: 0;
-    padding: 8px 16px;
+    padding: 6px 14px;
     border: 0;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     -ms-box-sizing: content-box;
     -o-box-sizing: content-box;
     box-sizing: content-box;
-    background: #666666;
-    color: #eeeeee; /* fallback for non rgba browsers */
-    color: rgba(255,255,255,.9);
+    background: #aaaaaa;
+    color: #333333; /* fallback for non rgba browsers */
     font-weight: bold;
-    font-size: 14px;
+    font-size: 10x;
     font-family: Arial, Helvetica, sans-serif;
     line-height: normal; /* set to normal to .btn can be usd on inputs in firefox with consistency */
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    letter-spacing: 1px;
     cursor: pointer;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -o-border-radius: 16px;
-    border-radius: 16px;
-    -webkit-transition: all .12s ease-in-out;
-    -moz-transition: all .12s ease-in-out;
-    -ms-transition: all .12s ease-in-out;
-    -o-transition: all .12s ease-in-out;
-    transition: all .12s ease-in-out;
+    @include border-radius(4);
+    @include transition(.12s);
 }
 
 .btn:hover{
+    color: #6495ed;
     background: #333333;
 }
 

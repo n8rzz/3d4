@@ -1,17 +1,32 @@
 <div class="wrapper">
-    <h1 class="hdg hdg_med">
-        <%= link_to 'Three D Four', root_path %>
-    </h1>
+    <div class="masthead">
+        <div class="masthead-left">
+            <h1 class="hdg hdg_med">
+                <%= link_to 'Three D Four', root_path, :class => 'link' %>
+            </h1>
+        </div>
+        <div class="masthead-right">
+            <ul class="hlist hlist_divided">
 
-    <% if user_signed_in? %>
+            <% if user_signed_in? %>
+                <li>
+                    <%= link_to current_user.email, edit_user_registration_path, :class => 'link' %>
+                </li>
+                <li>
+                    <%= button_to 'Logout', destroy_user_session_path, method: :delete, :class => 'btn' %>
+                </li>
 
-        <%= link_to current_user.email, edit_user_registration_path %> |
-        <%= button_to 'Logout',
-            destroy_user_session_path,
-            method: :delete %>
-    <% else %>
-        <%= link_to "Sign up", new_user_registration_path %> |
-        <%= link_to "Login", new_user_session_path %>
-    <% end %>
+            <% else %>
 
+                <li>
+                    <%= link_to "Sign up", new_user_registration_path %>
+                </li>
+                <li>
+                    <%= link_to "Login", new_user_session_path %>
+                </li>
+            <% end %>
+
+            </ul>
+        </div>
+    </div>
 </div>

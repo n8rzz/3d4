@@ -22,19 +22,19 @@ category: Typography
     line-height: 1.2;
 }
 
-.hdg_1 {
+.hdg_xlarge {
     font-size: $BASE_FONT_SIZE + 10px;
 }
-.hdg_2 {
+.hdg_large {
     font-size: $BASE_FONT_SIZE + 6px;
 }
-.hdg_3 {
+.hdg_med {
     font-size: $BASE_FONT_SIZE + 4px;
 }
-.hdg_4 {
+.hdg_small {
     font-size: $BASE_FONT_SIZE;
 }
-.hdg_5 {
+.hdg_xsmall {
     font-size: $BASE_FONT_SIZE - 4px;
 }
 

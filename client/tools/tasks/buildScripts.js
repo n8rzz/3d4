@@ -113,15 +113,16 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('buildScripts',
-        shouldMinify
-            ? [
-                'copy:buildScripts',
-                'requirejs:buildScripts',
-                'useminPrepare:buildScripts',
-                // 'concat:generated',
-                // 'uglify:generated'
-            ]
-            : [
+        // shouldMinify
+        //     ? [
+        //         'copy:buildScripts',
+        //         'requirejs:buildScripts',
+        //         'useminPrepare:buildScripts',
+        //         // 'concat:generated',
+        //         // 'uglify:generated'
+        //     ]
+        //     :
+            [
                 'copy:buildScripts'
             ]
     );

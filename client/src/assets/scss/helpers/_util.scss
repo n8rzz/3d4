@@ -29,6 +29,14 @@
     display: none !important;
 }
 
+@mixin border-radius($integer) {
+    -webkit-border-radius: $integer + px;
+    -moz-border-radius: $integer + px;
+    -ms-border-radius: $integer + px;
+    -o-border-radius: $integer + px;
+    border-radius: $integer + px;
+}
+
 // opacity mixin
 @mixin opacity($float, $integer) {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$integer)"; /* IE 8 */
@@ -42,26 +50,33 @@
     font-size: $val / $BASE_FONT_SIZE + rem;
 }
 
+@mixin transition($time) {
+    -webkit-transition: all $time ease-in-out;
+    -moz-transition: all $time ease-in-out;
+    -ms-transition: all $time ease-in-out;
+    -o-transition: all $time ease-in-out;
+    transition: all $time ease-in-out;
+}
 // ------------------------------------------------------------------------
 // Utilities
 // ------------------------------------------------------------------------
-.util-isHidden {
+.u-isHidden {
     display: none !important;
 }
 
-.util-isVisuallyHidden {
+.u-isVisuallyHidden {
     @include isVisuallyHidden();
 }
 
-.util-isTruncated {
+.u-isTruncated {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-.util-breakWord { word-break: break-word; }
+.u-breakWord { word-break: break-word; }
 
 @media screen and (max-width: 767px) {
-    .util-isNotScrollable {
+    .u-isNotScrollable {
         overflow: hidden;
     }
 }
@@ -70,9 +85,9 @@
 // Visibility
 // ------------------------------------------------------------------------
 @media screen and (min-width: 768px) {
-    .util-isHiddenMD { display: none !important; }
+    .u-isHiddenMD { display: none !important; }
 }
 
 @media screen and (max-width: 767px) {
-    .util-isHiddenSM { display: none !important; }
+    .u-isHiddenSM { display: none !important; }
 }

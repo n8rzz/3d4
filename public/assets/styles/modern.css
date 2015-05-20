@@ -80,10 +80,10 @@ textarea {
 --------------------------------------------------------------------- */
 /* Colors */
 /* Misc Colors */
-.util-isHidden {
+.u-isHidden {
   display: none !important; }
 
-.util-isVisuallyHidden {
+.u-isVisuallyHidden {
   overflow: hidden !important;
   width: 1px !important;
   height: 1px !important;
@@ -95,23 +95,23 @@ textarea {
   clip: rect(1px 1px 1px 1px) !important;
   clip: rect(1px, 1px, 1px, 1px) !important; }
 
-.util-isTruncated {
+.u-isTruncated {
   white-space: nowrap;
   text-overflow: ellipsis; }
 
-.util-breakWord {
+.u-breakWord {
   word-break: break-word; }
 
 @media screen and (max-width: 767px) {
-  .util-isNotScrollable {
+  .u-isNotScrollable {
     overflow: hidden; } }
 
 @media screen and (min-width: 768px) {
-  .util-isHiddenMD {
+  .u-isHiddenMD {
     display: none !important; } }
 
 @media screen and (max-width: 767px) {
-  .util-isHiddenSM {
+  .u-isHiddenSM {
     display: none !important; } }
 
 /*doc
@@ -209,6 +209,34 @@ category: Typography
 */
 img {
   max-width: 100%; }
+
+/* ---------------------------------------------------------------------
+ landmarks
+------------------------------------------------------------------------ */
+.page-hd {
+  height: 125px;
+  background-color: #efefef; }
+
+.page-bd {
+  padding: 20px 0; }
+
+.page-ft {
+  min-height: 100px;
+  background-color: #eeeeee; }
+
+.masthead {
+  display: table;
+  width: 100%; }
+
+.masthead > * {
+  display: table-cell;
+  width: 50%; }
+
+.masthead-left {
+  text-align: left; }
+
+.masthead-right {
+  text-align: right; }
 
 /* ---------------------------------------------------------------------
  Modules
@@ -359,38 +387,39 @@ category: Base
 .btn {
   display: inline-block;
   margin: 0;
-  padding: 8px 16px;
+  padding: 6px 14px;
   border: 0;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   -ms-box-sizing: content-box;
   -o-box-sizing: content-box;
   box-sizing: content-box;
-  background: #666666;
-  color: #eeeeee;
+  background: #aaaaaa;
+  color: #333333;
   /* fallback for non rgba browsers */
-  color: rgba(255, 255, 255, 0.9);
   font-weight: bold;
-  font-size: 14px;
+  font-size: 10x;
   font-family: Arial, Helvetica, sans-serif;
   line-height: normal;
   /* set to normal to .btn can be usd on inputs in firefox with consistency */
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 1px;
   cursor: pointer;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  -ms-border-radius: 16px;
-  -o-border-radius: 16px;
-  border-radius: 16px;
-  -webkit-transition: all .12s ease-in-out;
-  -moz-transition: all .12s ease-in-out;
-  -ms-transition: all .12s ease-in-out;
-  -o-transition: all .12s ease-in-out;
-  transition: all .12s ease-in-out; }
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: all 0.12s ease-in-out;
+  -moz-transition: all 0.12s ease-in-out;
+  -ms-transition: all 0.12s ease-in-out;
+  -o-transition: all 0.12s ease-in-out;
+  transition: all 0.12s ease-in-out; }
 
 .btn:hover {
+  color: #6495ed;
   background: #333333; }
 
 .btn_disabled {
@@ -460,6 +489,9 @@ category: Base
 /* ---------------------------------------------------------------------
  Form Inputs
 ------------------------------------------------------------------------ */
+.field {
+  padding-bottom: 10px; }
+
 .fieldInput {
   padding-left: 7px;
   border-radius: 3px; }
@@ -633,19 +665,19 @@ category: Typography
   font-weight: normal;
   line-height: 1.2; }
 
-.hdg_1 {
+.hdg_xlarge {
   font-size: 26px; }
 
-.hdg_2 {
+.hdg_large {
   font-size: 22px; }
 
-.hdg_3 {
+.hdg_med {
   font-size: 20px; }
 
-.hdg_4 {
+.hdg_small {
   font-size: 16px; }
 
-.hdg_5 {
+.hdg_xsmall {
   font-size: 12px; }
 
 .mix-hdg_caps {
@@ -744,6 +776,13 @@ Horizontal list elements with pipes separating each element:
   margin-left: 12px;
   padding-left: 12px;
   border-left: 1px solid; }
+
+.link {
+  color: blue;
+  text-decoration: none; }
+
+.link:hover {
+  color: green; }
 
 /*doc
 ---

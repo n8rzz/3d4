@@ -7,7 +7,7 @@ require.config({
         'jquery-ujs': '../vendor/jquery-ujs/src/rails',
         handlebars: '../vendor/handlebars/handlebars.runtime',
         structurejs: '../vendor/structurejs/js/',
-        threejs: '../vendor/threejs/buils/three.min'
+        threejs: '../vendor/threejs/build/three.min'
     },
 
     shim: {
